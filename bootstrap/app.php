@@ -9,7 +9,8 @@ use Allsop\ObjectMap;
 /**
  * Hide the 'Custom Fields' menu in production mode.
  */
-if (defined('USE_PRODUCTION_ACF')) {
+if (defined('USE_PRODUCTION_ACF'))
+{
     define('ACF_LITE', true);
 }
 
