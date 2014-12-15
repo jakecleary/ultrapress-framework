@@ -21,15 +21,7 @@ class Config
      *
      * @var string
      */
-    public static $configDirectory;
-
-    /**
-     * Initialize the config system statically.
-     */
-    public static function init()
-    {
-        self::$configDirectory = FULL_PATH . 'config/';
-    }
+    public static $configDirectory = FULL_PATH . 'config/';
 
     /**
      * Read a config file.
