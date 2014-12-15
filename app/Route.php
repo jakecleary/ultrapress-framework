@@ -4,7 +4,8 @@ namespace Allsop;
 
 use Allsop\View;
 
-class Route {
+class Route
+{
 
     /**
      * Respond to a GET request.
