@@ -1,6 +1,6 @@
 <?php
 
-use Allsop\ObjectMap;
+use Allsop\App;
 
 /**
  * Theme initialization.
@@ -37,7 +37,7 @@ require_once(FULL_PATH . 'config/init.php');
  * Simply add more by creating a new custom post-type class and
  * adding the full class path to the array below.
  */
-ObjectMap::bind([
+App::bind([
     'pages' => new Allsop\PostTypes\Page()),
     'posts' => new Allsop\PostTypes\Post())
 ]);
