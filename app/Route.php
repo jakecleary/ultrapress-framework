@@ -4,6 +4,13 @@ namespace Allsop;
 
 use Allsop\View;
 
+/**
+ * Class for routing requesting to different parts of the app. Essentailly a
+ * wrapper around Wordpress' various conditional functions, such as
+ * is_home(). Allows you too look for these requests and direct
+ * the user to specific controller methods. Allows us to
+ * avoid Wordpress' terrible templting system.
+ */
 class Route
 {
 
