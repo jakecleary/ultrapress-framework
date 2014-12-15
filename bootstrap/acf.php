@@ -5,7 +5,7 @@
  *
  * @var string
  */
-$acfPath = FULL_PATH . 'config/acf/fields';
+$acfPath = FULL_PATH . 'app/fields';
 
 /**
  * Set the path of where we load the fields.
