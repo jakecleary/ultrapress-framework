@@ -1,0 +1,20 @@
+!.gitignore
+!README.md
+
+# NPM
+/node_modules
+
+# composer
+/vendor
+
+# assets
+/public/styles
+/public/js
+/public/img
+
+# generic
+.DS_Store
+.sass-cache
+*.sublime*
+_deploy
+!.gitkeep
