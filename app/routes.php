@@ -8,3 +8,7 @@ use WpAdv\Route.php
  * go to something more specific (e.g '/contact' should be picked up by the
  * 'getContact' PageController method, not the 'show' method.
  */
+
+Route::get('page', 'home', [
+    'uses' => 'PageController@getHome'
+]);
