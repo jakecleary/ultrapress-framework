@@ -1,0 +1,32 @@
+{
+    "name": "WpAdv",
+    "description": "Advanced WP them boilerplate",
+    "authors": [
+        {
+            "name": "Jake Cleary",
+            "email": "shout@jakecleary.net",
+            "homepage": "http://jakecleary.net"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://wpackagist.org"
+        }
+    ],
+    "require-dev": {
+        "wpackagist-plugin/duplicate-post": "*",
+        "wpackagist-plugin/ajax-thumbnail-rebuild": "*",
+        "wpackagist-plugin/bulk-creator": "1.*"
+    },
+    "extra": {
+        "installer-paths": {
+            "../../plugins/{$name}/": ["type:wordpress-plugin"]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "WpAdv\\": "app/"
+        }
+    }
+}
