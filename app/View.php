@@ -33,7 +33,7 @@ class View
     }
 
     /**
-     * Inlcude a view with data.
+     * Include a view with data.
      *
      * @param string $file The template you want to display
      * @param object $item The optional data of the current object in the loop
