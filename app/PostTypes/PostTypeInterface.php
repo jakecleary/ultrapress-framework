@@ -1,6 +1,6 @@
 <?php
 
-namespace WpAdv\PostTypes;
+namespace UltraPress\PostTypes;
 
 abstract class PostTypeInterface
 {

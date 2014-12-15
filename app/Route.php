@@ -1,8 +1,8 @@
 <?php
 
-namespace WpAdv;
+namespace UltraPress;
 
-use WpAdv\View;
+use UltraPress\View;
 
 /**
  * Class for routing requesting to different parts of the app. Essentailly a
@@ -160,7 +160,7 @@ class Route
         // Get the Class/Method to use
         $controllerData = $pointer['uses'];
         $parts = explode('@', $controllerData);
-        $controller = "WpAdv\\Controllers\\$parts[0]";
+        $controller = "UltraPress\\Controllers\\$parts[0]";
         $method = $parts[1];
         $obj = new $controller;
 

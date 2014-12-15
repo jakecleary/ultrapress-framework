@@ -1,6 +1,6 @@
 <?php
 
-namespace WpAdv;
+namespace UltraPress;
 
 /**
  * Allows you to bind an instance to a key so that you can

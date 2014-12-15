@@ -1,6 +1,6 @@
 <?php
 
-use WpAdv\App;
+use UltraPress\App;
 
 /**
  * Theme initialization.
@@ -40,6 +40,6 @@ require_once(FULL_PATH . 'config/init.php');
  * adding the full class path to the array below.
  */
 App::bind([
-    'pages' => new WpAdv\PostTypes\Page()),
-    'posts' => new WpAdv\PostTypes\Post())
+    'pages' => new UltraPress\PostTypes\Page()),
+    'posts' => new UltraPress\PostTypes\Post())
 ]);

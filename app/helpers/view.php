@@ -5,11 +5,11 @@
  *
  * @param  string $file The file path using dot-notation
  * @param  array $data Data to pass through to the view
- * @return WpAdv\View
+ * @return UltraPress\View
  */
 function view($file, $data = [])
 {
-    return \WpAdv\View::get($file, $data);
+    return \UltraPress\View::get($file, $data);
 }
 
 /**
@@ -17,9 +17,9 @@ function view($file, $data = [])
  *
  * @param string $file The file path using dot-notation
  * @param array $data Data to pass through to the partial
- * @return WpAdv\View
+ * @return UltraPress\View
  */
 function partial($file, $data = [])
 {
-    return \WpAdv\View::partial($file, $data);
+    return \UltraPress\View::partial($file, $data);
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace WpAdv;
+namespace UltraPress;
 
-use WpAdv\ObjectMap;
+use UltraPress\ObjectMap;
 
 /**
  * Class for loading template files from within the /views directory. Allows you

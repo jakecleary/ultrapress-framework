@@ -1,5 +1,5 @@
 {
-    "name": "WpAdv",
+    "name": "UltraPress",
     "description": "Advanced WP them boilerplate",
     "authors": [
         {
@@ -26,7 +26,7 @@
     },
     "autoload": {
         "psr-4": {
-            "WpAdv\\": "app/"
+            "UltraPress\\": "app/"
         }
     }
 }

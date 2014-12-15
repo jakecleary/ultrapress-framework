@@ -1,6 +1,6 @@
 <?php
 
-namespace WpAdv\Controllers;
+namespace UltraPress\Controllers;
 
 class BaseController
 {

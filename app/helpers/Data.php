@@ -39,7 +39,7 @@ class Data
      */
     public static function getObject($name)
     {
-        return WpAdv\ObjectMap::instance($name);
+        return UltraPress\ObjectMap::instance($name);
     }
 
     /**

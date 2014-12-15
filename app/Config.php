@@ -1,6 +1,6 @@
 <?php
 
-namespace WpAdv;
+namespace UltraPress;
 
 /**
  * Class for reading app configuration data stored inside the /config

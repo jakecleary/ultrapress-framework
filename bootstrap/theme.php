@@ -1,6 +1,6 @@
 <?php
 
-use WpAdv\Config;
+use UltraPress\Config;
 
 /**
  * Set up the images sizes we need.

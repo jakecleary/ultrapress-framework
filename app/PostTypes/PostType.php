@@ -1,8 +1,8 @@
 <?php
 
-namespace WpAdv\PostTypes;
+namespace UltraPress\PostTypes;
 
-use WpAdv\PostTypes\PostTypeInterface;
+use UltraPress\PostTypes\PostTypeInterface;
 use WP_Query;
 
 class PostType extends PostTypeInterface {
