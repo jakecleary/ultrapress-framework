@@ -1,8 +1,8 @@
 <?php
 
-namespace Allsop\PostTypes;
+namespace WpAdv\PostTypes;
 
-use Allsop\PostTypes\PostTypeInterface;
+use WpAdv\PostTypes\PostTypeInterface;
 use WP_Query;
 
 class PostType extends PostTypeInterface {

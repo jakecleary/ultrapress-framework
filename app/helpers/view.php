@@ -5,11 +5,11 @@
  *
  * @param  string $file The file path using dot-notation
  * @param  array $data Data to pass through to the view
- * @return Allsop\View
+ * @return WpAdv\View
  */
 function view($file, $data = [])
 {
-    return \Allsop\View::get($file, $data);
+    return \WpAdv\View::get($file, $data);
 }
 
 /**
@@ -17,9 +17,9 @@ function view($file, $data = [])
  *
  * @param string $file The file path using dot-notation
  * @param array $data Data to pass through to the partial
- * @return Allsop\View
+ * @return WpAdv\View
  */
 function partial($file, $data = [])
 {
-    return \Allsop\View::partial($file, $data);
+    return \WpAdv\View::partial($file, $data);
 }

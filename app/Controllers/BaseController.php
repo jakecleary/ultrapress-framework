@@ -1,6 +1,6 @@
 <?php
 
-namespace Allsop\Controllers;
+namespace WpAdv\Controllers;
 
 class BaseController
 {

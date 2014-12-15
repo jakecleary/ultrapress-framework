@@ -1,6 +1,6 @@
 <?php
 
-use Allsop\Config;
+use WpAdv\Config;
 
 /**
  * Set up the images sizes we need.

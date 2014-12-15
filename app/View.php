@@ -1,8 +1,8 @@
 <?php
 
-namespace Allsop;
+namespace WpAdv;
 
-use Allsop\ObjectMap;
+use WpAdv\ObjectMap;
 
 /**
  * Class for loading template files from within the /views directory. Allows you

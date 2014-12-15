@@ -1,6 +1,6 @@
 <?php
 
-use Allsop\Route.php
+use WpAdv\Route.php
 
 /**
  * Define all your app routes in this file. Order them by specificity (high to

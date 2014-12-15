@@ -1,10 +1,12 @@
 <?php
 
-use Allsop\App;
+use WpAdv\App;
 
 /**
  * Theme initialization.
  */
+
+Config::init();
 
 /**
  * Hide the 'Custom Fields' menu in production mode.
@@ -38,6 +40,6 @@ require_once(FULL_PATH . 'config/init.php');
  * adding the full class path to the array below.
  */
 App::bind([
-    'pages' => new Allsop\PostTypes\Page()),
-    'posts' => new Allsop\PostTypes\Post())
+    'pages' => new WpAdv\PostTypes\Page()),
+    'posts' => new WpAdv\PostTypes\Post())
 ]);

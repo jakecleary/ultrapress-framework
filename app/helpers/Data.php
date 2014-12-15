@@ -39,7 +39,7 @@ class Data
      */
     public static function getObject($name)
     {
-        return Allsop\ObjectMap::instance($name);
+        return WpAdv\ObjectMap::instance($name);
     }
 
     /**

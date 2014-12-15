@@ -42,7 +42,7 @@ if(function_exists('acf_add_options_page'))
     acf_add_options_page([
         'page_title' => 'A&F Settings',
         'menu_title' => 'Settings',
-        'menu_slug'  => 'allsop-site-settings',
+        'menu_slug'  => 'site-settings',
         'capability' => 'edit_posts',
         'redirect'   => false
     ]);
@@ -50,6 +50,6 @@ if(function_exists('acf_add_options_page'))
     acf_add_options_sub_page([
         'page_title'  => 'Products',
         'menu_title'  => 'Products',
-        'parent_slug' => 'allsop-site-settings',
+        'parent_slug' => 'site-settings',
     ]);
 }

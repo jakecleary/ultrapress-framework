@@ -1,6 +1,6 @@
 <?php
 
-namespace Allsop\PostTypes;
+namespace WpAdv\PostTypes;
 
 abstract class PostTypeInterface
 {

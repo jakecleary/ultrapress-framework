@@ -1,8 +1,8 @@
 <?php
 
-namespace Allsop;
+namespace WpAdv;
 
-use Allsop\View;
+use WpAdv\View;
 
 /**
  * Class for routing requesting to different parts of the app. Essentailly a
@@ -160,7 +160,7 @@ class Route
         // Get the Class/Method to use
         $controllerData = $pointer['uses'];
         $parts = explode('@', $controllerData);
-        $controller = "Allsop\\Controllers\\$parts[0]";
+        $controller = "WpAdv\\Controllers\\$parts[0]";
         $method = $parts[1];
         $obj = new $controller;
 
