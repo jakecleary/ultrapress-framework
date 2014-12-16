@@ -1,5 +1,5 @@
-<?php echo partial('header'); ?>
+<?php partial('header'); ?>
 
     <h1>Welcome</h1>
 
-<?php echo partial('footer'); ?>
+<?php partial('footer'); ?>
