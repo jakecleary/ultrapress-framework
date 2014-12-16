@@ -26,7 +26,8 @@ class Config
     /**
      * Initialize the config system statically.
      */
-    public static function init() {
+    public static function init()
+    {
         self::$configDirectory = FULL_PATH . 'config/';
     }
 
