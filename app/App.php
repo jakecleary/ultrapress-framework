@@ -19,12 +19,22 @@ class App
     /**
     * Bind an object to a key in a bindings array.
     *
-    * @param string $key The key to store it under
-    * @param object $object The object we're storing
+    * @param array|string $key key to store under OR array of key => object pairs
+    * @param object $object The object we're storing OR null
     */
-    public static function bind($key, $object)
+    public static function bind($key, $object = null)
     {
-        self::$bindings[$key] = $object;
+        if(is_array($key))
+        {
+            foreach($key as $key => $object)
+            {
+                self::$bindings[$key] = $object;
+            }
+        }
+        else
+        {
+            self::$bindings[$key] = $object;
+        }
     }
 
     /**
