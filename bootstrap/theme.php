@@ -33,3 +33,11 @@ if(Config::theme('admin_bar') === false)
 {
     add_filter('show_admin_bar', '__return_false');
 }
+
+/**
+ * Hide the 'Custom Fields' menu in production mode.
+ */
+if (defined('USE_PRODUCTION_ACF'))
+{
+    define('ACF_LITE', true);
+}

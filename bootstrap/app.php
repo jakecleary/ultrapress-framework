@@ -3,20 +3,6 @@
 use UltraPress\App;
 
 /**
- * Theme initialization.
- */
-
-Config::init();
-
-/**
- * Hide the 'Custom Fields' menu in production mode.
- */
-if (defined('USE_PRODUCTION_ACF'))
-{
-    define('ACF_LITE', true);
-}
-
-/**
  * Load the classmap.
  */
 require_once(FULL_PATH . 'vendor/autoload.php');
@@ -30,9 +16,9 @@ foreach (glob(FULL_PATH . 'app/helpers/*.php') as $filename)
 }
 
 /**
- * Configure the site.
- */
-require_once(FULL_PATH . 'config/init.php');
+* Initialize the configuration.
+*/
+Config::init();
 
 /**
  * Bind instances of each post type to the app so we can call them easily.
