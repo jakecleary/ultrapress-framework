@@ -31,9 +31,9 @@ class PostType extends PostTypeInterface {
     /**
      * Archive rewrite rules.
      *
-     * @var object
+     * @var array
      */
-    protected $rewrite = (object) [];
+    protected $rewrite = [];
 
     /**
      * Icon name.
@@ -98,7 +98,7 @@ class PostType extends PostTypeInterface {
         // Rewrite rules
         $this->rewrite = (object) [
             'slug' => isset($args['rewrite']['slug']) ? $args['rewrite']['slug'] : $slug,
-            'with_front' = isset($args['rewrite']['with_front']) ? $args['rewrite']['with_front'] : false
+            'with_front' => isset($args['rewrite']['with_front']) ? $args['rewrite']['with_front'] : false
         ];
 
         // Set the labels
