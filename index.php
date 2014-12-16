@@ -16,4 +16,4 @@ define('IMAGES_DIR', PUBLIC_DIR . 'img/');
 /**
 * Initialize the app.
 */
-include(FULL_PATH . 'app/bootstrap/start.php');
+include(FULL_PATH . 'bootstrap/start.php');
