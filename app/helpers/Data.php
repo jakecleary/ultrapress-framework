@@ -6,7 +6,7 @@
  */
 class Data
 {
-    
+
     /**
      * Dump some data in a clean way.
      *
@@ -28,7 +28,7 @@ class Data
      */
     public static function dd($data)
     {
-        dump($data);
+        self::dump($data);
         die();
     }
 
