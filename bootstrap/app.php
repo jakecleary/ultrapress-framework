@@ -1,6 +1,7 @@
 <?php
 
 use UltraPress\App;
+use UltraPress\Config;
 
 /**
  * Load the classmap.
@@ -26,6 +27,6 @@ Config::init();
  * adding the full class path to the array below.
  */
 App::bind([
-    'pages' => new UltraPress\PostTypes\Page()),
-    'posts' => new UltraPress\PostTypes\Post())
+    'pages' => new UltraPress\PostTypes\Page(),
+    'posts' => new UltraPress\PostTypes\Post()
 ]);
