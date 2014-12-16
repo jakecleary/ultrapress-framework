@@ -2,6 +2,8 @@
 
 namespace UltraPress\Controllers;
 
+use UltraPress\View;
+
 class PageController extends BaseController
 {
 
