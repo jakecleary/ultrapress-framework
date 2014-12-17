@@ -11,7 +11,9 @@ class Page extends PostType
 
     public function __construct()
     {
-
+        $this->postType = 'page';
+        $this->singular = $this->postType;
+        $this->plural   = $this->postType . 's';
     }
 
 }

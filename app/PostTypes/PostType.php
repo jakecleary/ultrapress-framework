@@ -12,28 +12,28 @@ class PostType extends PostTypeInterface {
      *
      * @var string
      */
-    protected $slug = '';
+    public $postType = '';
 
     /**
      * Capitalized name.
      *
      * @var string
      */
-    protected $singular;
+    public $singular;
 
     /**
      * Capitalized plural name.
      *
      * @var string
      */
-    protected $plural;
+    public $plural;
 
     /**
      * Archive rewrite rules.
      *
      * @var array
      */
-    protected $rewrite = [];
+    public $rewrite = [];
 
     /**
      * Icon name.
@@ -41,42 +41,42 @@ class PostType extends PostTypeInterface {
      * @see https://developer.wordpress.org/resource/dashicons/
      * @var string
      */
-    protected $icon;
+    public $icon;
 
     /**
      * Which built it editor widgets it supports.
      *
      * @var array
      */
-    protected $supports = [];
+    public $supports = [];
 
     /**
      * Whether the post-type is publicly queryable etc.
      *
      * @var boolean
      */
-    protected $public;
+    public $public;
 
     /**
      * Whether we want to generate a rewrite rule to load a post-type archive.
      *
      * @var boolean
      */
-    protected $has_archive;
+    public $has_archive;
 
     /**
      * The labels for the post-type in the admin area.
      *
      * @var array
      */
-    protected $labels = [];
+    public $labels = [];
 
     /**
      * The taxonomies that belong to the post-type.
      *
      * @var string
      */
-    protected $taxonomies = [];
+    public $taxonomy;
 
     /**
      * Register the post type if it doesn't exist yet.
@@ -106,6 +106,13 @@ class PostType extends PostTypeInterface {
 
         // Register on the 'init' hook
         add_action('init', [$this, 'register']);
+
+        /**
+         * These are used to alter thw rewrite rules for the post-type.
+         *
+         * add_action('init', [$this, 'registerRewriteRules']);
+         * add_filter('post_type_link', [$this, 'filterPostTypeLink'], 100, 3);
+         */
     }
 
     /**
@@ -147,6 +154,53 @@ class PostType extends PostTypeInterface {
             'not_found'          => 'No ' . $this->plural . ' found.',
             'not_found_in_trash' => 'No ' . $this->plural . ' found in Trash.'
         ];
+    }
+
+    /**
+     * Alter post-type's links
+     *
+     * @param string $permalink Default permalink
+     * @param WP_Post $item The item object
+     * @param boolean $leavename
+     * @return string The filtered permalink
+     */
+    public function filterPostTypeLink($permalink, $item, $leavename)
+    {
+        if (get_post_type($item->ID) == $this->singular)
+        {
+            $terms = wp_get_post_terms($item->ID, $this->taxonomy);
+            $term = ($terms) ? $terms[0]->term_id : false;
+            $permalink = $this->postTypePermalink($item->ID, $term, $leavename, false);
+        }
+
+        return $permalink;
+    }
+
+    /**
+     * Return the correct permalink based on the rewrite rules
+     *
+     * @param integer $itemId The item's (post's) ID
+     * @param integer $catId ID of the item's term
+     * @param boolean $noName
+     * @param boolean $onlyUrl Whether to wrap permalink in an <a> or not
+     * @return string The permalink
+     */
+    public function postTypePermalink($itemId, $catId = false, $noName = false, $onlyUrl = false)
+    {
+        $post = get_post($postId);
+
+        $permalink = get_term_link(intval($catId), $this->taxonomy);
+        $permalink = ($catId) ? trailingslashit($permalink) : home_url('/' . $this->plural . '/');
+        $permalink .= trailingslashit(($noName ? "%$post->post_type%" : $post->post_name));
+
+        if($onlyUrl === false)
+        {
+            return '<a href="' . $permalink . '/">' . get_the_title($post->ID) . '</a>';
+        }
+        else
+        {
+            return $permalink;
+        }
     }
 
     /**
