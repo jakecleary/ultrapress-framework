@@ -82,6 +82,10 @@ class Rewrite
         {
             $count++;
 
+            if($count === 1) {
+                $content .= '?post_type=' . $this->postType->postType;
+            }
+
             if(preg_match('/\{\w+\}/', $ruleChunk))
             {
                 // Add to the url catcher
@@ -89,17 +93,8 @@ class Rewrite
 
                 // Add to the query string
                 $string = preg_match('/\{(.*?)\}/', $ruleChunk, $matches);
-
-                if($count === 1)
-                {
-                    $content .= '?' . $matches[1];
-                }
-                else
-                {
-                    $content .= '&' . $matches[1];
-                }
-
-                Data::dump($content);
+                $index = '$matches[' . ($count - 1) . ']';
+                $content .= '&' . $matches[1] . '=' . $index;
             }
             else
             {
