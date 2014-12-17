@@ -2,8 +2,8 @@
 
 namespace UltraPress;
 
-use UltraPress\PostTypes\PostType;
 use Data;
+use UltraPress\PostTypes\PostType;
 
 /**
  * Class for easilty registering rewrite rules for a
@@ -20,6 +20,13 @@ class Rewrite
     private $rules = [];
 
     /**
+     * The post type the rules are for.
+     *
+     * @var UltraPress\PostTypes\PostType
+     */
+    private $postType;
+
+    /**
      * Generate some new rewrite rules for a post type.
      *
      * @param PostType $postType
@@ -27,6 +34,8 @@ class Rewrite
      */
     public function __construct(PostType $postType, array $rules)
     {
+        $this->postType = $postType;
+
         foreach($this->getRulesets($rules) as $ruleset)
         {
             $rulePair = $this->generateRule($ruleset);
@@ -64,23 +73,42 @@ class Rewrite
     private function generateRule($ruleset)
     {
         $regex = '';
+        $content = 'index.php';
+
+        $count = 0;
+        $total = count($ruleset);
 
         foreach($ruleset as $ruleChunk)
         {
+            $count++;
+
             if(preg_match('/\{\w+\}/', $ruleChunk))
             {
+                // Add to the url catcher
                 $regex .= '/([^/]+)';
+
+                // Add to the query string
+                $string = preg_match('/\{(.*?)\}/', $ruleChunk, $matches);
+
+                if($count === 1)
+                {
+                    $content .= '?' . $matches[1];
+                }
+                else
+                {
+                    $content .= '&' . $matches[1];
+                }
+
+                Data::dump($content);
             }
             else
             {
+                // Add to the url catcher
                 $regex .= '/' . $ruleChunk;
             }
         }
 
         $regex .= '/?$';
-
-        $content = preg_match('/\{(.*?)\}/', $ruleChunk, $matches);
-        $content = $matches[1];
 
         return array($regex, $content);
     }

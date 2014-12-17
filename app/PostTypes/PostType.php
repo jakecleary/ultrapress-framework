@@ -48,7 +48,7 @@ class PostType extends PostTypeInterface {
      *
      * @var array
      */
-    protected $supports;
+    protected $supports = [];
 
     /**
      * Whether the post-type is publicly queryable etc.
@@ -102,7 +102,7 @@ class PostType extends PostTypeInterface {
         ];
 
         // Set the labels
-        self::setLabels();
+        $this->setLabels();
 
         // Register on the 'init' hook
         add_action('init', [$this, 'register']);
