@@ -9,30 +9,6 @@ class Item
 {
 
     /**
-     * Get the WP_Post object from the global instance.
-     *
-     * @return WP_Post
-     */
-    public static function object()
-    {
-        global $post;
-
-        return $post;
-    }
-
-    /**
-     * Get the WP_Query object from the global instance.
-     *
-     * @return WP_Query
-     */
-    public static function queryObject()
-    {
-        global $wp_query;
-
-        return $wp_query;
-    }
-
-    /**
      * Output the retrieved content with proper formatting.
      *
      * @param string $content The item's content
