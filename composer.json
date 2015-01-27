@@ -1,6 +1,8 @@
 {
-    "name": "UltraPress",
-    "description": "Advanced WP them boilerplate",
+    "name": "jakecleary/ultrapress",
+    "description": "Advanced WP theme framework.",
+    "license": "MIT",
+    "keywords": ["framework", "wordpress", "ultrapress"],
     "authors": [
         {
             "name": "Jake Cleary",
@@ -14,10 +16,8 @@
             "url": "http://wpackagist.org"
         }
     ],
-    "require-dev": {
-        "wpackagist-plugin/duplicate-post": "*",
-        "wpackagist-plugin/ajax-thumbnail-rebuild": "*",
-        "wpackagist-plugin/bulk-creator": "1.*"
+    "require": {
+        "jakecleary/ultrapress-library": "*"
     },
     "extra": {
         "installer-paths": {
