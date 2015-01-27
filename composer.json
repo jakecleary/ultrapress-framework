@@ -1,6 +1,6 @@
 {
     "name": "jakecleary/ultrapress",
-    "description": "Advanced WP theme framework.",
+    "description": "An advanced framework for working with Wordpress; the core app folder structure.",
     "license": "MIT",
     "keywords": ["framework", "wordpress", "ultrapress"],
     "authors": [
