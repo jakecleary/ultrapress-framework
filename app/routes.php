@@ -1,6 +1,6 @@
 <?php
 
-use UltraPress\Route;
+use Ultra\Router\Route;
 
 /**
  * Define all your app routes in this file. Order them by specificity (high to

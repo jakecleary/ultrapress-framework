@@ -2,11 +2,10 @@
 
 namespace UltraPress\Controllers;
 
-use UltraPress\View;
+use Ultra\View\View;
 
 class PageController extends BaseController
 {
-
     /**
      * View the home page.
      */

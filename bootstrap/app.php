@@ -1,7 +1,7 @@
 <?php
 
-use UltraPress\App;
-use UltraPress\Config;
+use Ultra\Application\Container;
+use Ultra\Config\Config;
 
 /**
  * Load the classmap.
@@ -11,7 +11,7 @@ require_once(FULL_PATH . 'vendor/autoload.php');
 /**
  * Load helper functions.
  */
-foreach (glob(FULL_PATH . 'app/helpers/*.php') as $filename)
+foreach (glob(FULL_PATH . 'helpers/*.php') as $filename)
 {
     include $filename;
 }
@@ -26,7 +26,7 @@ Config::init();
  * Simply add more by creating a new custom post-type class and
  * adding the full class path to the array below.
  */
-App::bind([
+Container::bind([
     'pages' => new UltraPress\PostTypes\Page(),
     'posts' => new UltraPress\PostTypes\Post()
 ]);

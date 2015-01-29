@@ -4,7 +4,7 @@ namespace UltraPress\PostTypes;
 
 use WP_Post;
 use WP_Query;
-use UltraPress\PostTypes\PostType;
+use Ultra\PostType\PostType;
 
 class Page extends PostType
 {

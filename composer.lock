@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "jakecleary/ultrapress-library",
-            "version": "v0.2.1",
+            "version": "v0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jakecleary/ultrapress-library.git",
-                "reference": "74de1074873410775f0761aa385ff75688ce7426"
+                "reference": "6a08513d105efe72359d65c1ca59aa023c90544f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jakecleary/ultrapress-library/zipball/74de1074873410775f0761aa385ff75688ce7426",
-                "reference": "74de1074873410775f0761aa385ff75688ce7426",
+                "url": "https://api.github.com/repos/jakecleary/ultrapress-library/zipball/6a08513d105efe72359d65c1ca59aa023c90544f",
+                "reference": "6a08513d105efe72359d65c1ca59aa023c90544f",
                 "shasum": ""
             },
             "type": "library",
@@ -43,7 +43,7 @@
                 "ultrapress",
                 "wordpress"
             ],
-            "time": "2015-01-27 15:46:38"
+            "time": "2015-01-29 11:28:24"
         }
     ],
     "packages-dev": [],

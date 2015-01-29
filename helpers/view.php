@@ -9,7 +9,7 @@
  */
 function view($file, $data = [])
 {
-    return \UltraPress\View::get($file, $data);
+    return \Ultra\View\View::get($file, $data);
 }
 
 /**
@@ -21,5 +21,5 @@ function view($file, $data = [])
  */
 function partial($file, $data = [])
 {
-    return \UltraPress\View::partial($file, $data);
+    return \Ultra\View\View::partial($file, $data);
 }

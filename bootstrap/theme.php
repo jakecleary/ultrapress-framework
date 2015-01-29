@@ -1,6 +1,6 @@
 <?php
 
-use UltraPress\Config;
+use Ultra\Config\Config;
 
 /**
  * Set up the images sizes we need.
