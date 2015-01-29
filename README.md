@@ -1,8 +1,8 @@
-# UltraPress
+# Not just another Wordpress theme
 
-## Not just another Wordpress theme
+## What?
 
-A theme boilerplate that utilizes the MVC pattern to bring structure and sanity to Wordpress development.
+**UltraPress:** a theme boilerplate that utilizes the MVC pattern to bring structure and sanity to Wordpress development.
 
 **Note:** for the library that supports UltraPress, see [jakecleary/ultrapress-library](https://github.com/jakecleary/ultrapress-library/).
 
@@ -12,7 +12,7 @@ A theme boilerplate that utilizes the MVC pattern to bring structure and sanity 
 
 Wordpress sucks, but a lot of developers have to work with it for various reasons outside of their control, so I decided to try and make it suck a little less.
 
-## Setting up
+## How
 
 1. [Download Wordpress](https://wordpress.org/latest.zip) and copy it into your project folder.
 2. `$ cd wp-content/themes/`
